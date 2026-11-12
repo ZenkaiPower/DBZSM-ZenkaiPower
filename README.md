@@ -4,35 +4,6 @@
 
 The **ZENKAI Power!** project aims to provide a complete version of **Dragon Ball Z Sparking! METEOR**, also known as **Dragon Ball Z Budokai Tenkaichi 3**, as if the game had been officially released for PC. The project also celebrates the different releases of the game by bringing together their unique features into a definitive edition.
 
-## Content
-
-- [Dragon Ball Z Sparking! METEOR](#dragon-ball-z-sparking-meteor)
-  - [Content](#content)
-  - [Game Versions](#game-versions)
-    - [Sparking! METEOR](#sparking-meteor)
-    - [Budokai Tenkaichi 3](#budokai-tenkaichi-3)
-    - [Nintendo Wii Versions](#nintendo-wii-versions)
-  - [Tenkaichi3Decomp](#tenkaichi3decomp)
-    - [Higher 3D Resolutions](#higher-3d-resolutions)
-    - [Texture Replacement](#texture-replacement)
-    - [Video Options](#video-options)
-    - [Alternative Clash Controls](#alternative-clash-controls)
-    - [Autosave](#autosave)
-    - [Disc Fusion](#disc-fusion)
-    - [Online Multiplayer](#online-multiplayer)
-    - [Native Text](#native-text)
-  - [Added Features](#added-features)
-    - [Widescreen Support](#widescreen-support)
-    - [Keyboard and Mouse Support](#keyboard-and-mouse-support)
-    - [New Options in the Options Menu](#new-options-in-the-options-menu)
-    - [Game Edition Selection](#game-edition-selection)
-    - [Starting Characters](#starting-characters)
-    - [LAN and Online Multiplayer](#lan-and-online-multiplayer)
-  - [Installation](#installation)
-  - [Source Code](#source-code)
-  - [Licenses](#licenses)
-  - [Legal](#legal)
-
 ## Game Versions
 
 ### Sparking! METEOR
