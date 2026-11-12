@@ -32,7 +32,18 @@
         </ul>
       </nav>
     </aside>
-    <main id="content">{{ content }}</main>
+    <main id="content">
+      {% assign sections = content | split: '<h2' %}
+      <div class="content-intro">{{ sections.first }}</div>
+      <div class="content-sections">
+        {% assign full_width_start = sections.size | minus: 3 %}
+        {% for section in sections offset: 1 %}
+          <section class="{% if forloop.index >= full_width_start %}content-wide{% else %}content-column{% endif %}">
+            <h2{{ section }}
+          </section>
+        {% endfor %}
+      </div>
+    </main>
   </div>
   <footer>ZENKAI Power! · <a href="https://github.com/ZenkaiPower/DBZSM-ZenkaiPower/blob/main/README.md">View the README on GitHub</a></footer>
 </body>
