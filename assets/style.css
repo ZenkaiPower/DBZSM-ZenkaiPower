@@ -1,0 +1,43 @@
+:root { color-scheme: light; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; color: #24292f; background: #fff; line-height: 1.7; }
+* { box-sizing: border-box; }
+body { margin: 0; }
+a { color: #0969da; text-underline-offset: 3px; }
+a:hover { text-decoration: underline; }
+a:focus-visible, [tabindex]:focus-visible { outline: 2px solid #0969da; outline-offset: 4px; }
+.site-header { max-width: 1180px; margin: auto; padding: 24px 32px; display: flex; align-items: center; justify-content: space-between; gap: 20px; border-bottom: 1px solid #d8dee4; }
+.brand { color: #24292f; font-size: 20px; font-weight: 700; text-decoration: none; }
+.site-header nav { display: flex; gap: 24px; font-size: 14px; }
+.page { max-width: 1180px; margin: 40px auto 64px; padding: 0 32px; display: grid; grid-template-columns: 190px minmax(0, 1fr); gap: 48px; }
+aside { align-self: start; position: sticky; top: 24px; font-size: 14px; }
+aside h2 { font-size: 14px; margin: 0 0 12px; }
+aside ul { list-style: none; padding: 0; margin: 0; }
+aside li { margin: 8px 0; }
+aside a { color: #57606a; text-decoration: none; }
+main { min-width: 0; overflow-wrap: break-word; }
+h1, h2, h3 { line-height: 1.3; color: #1f2328; scroll-margin-top: 24px; }
+main h1 { font-size: 30px; margin: 0 0 24px; padding-bottom: 16px; border-bottom: 1px solid #d8dee4; }
+main h2 { font-size: 24px; margin: 42px 0 18px; padding-bottom: 10px; border-bottom: 1px solid #d8dee4; }
+main h3 { font-size: 19px; margin: 30px 0 12px; }
+p { margin: 0 0 18px; }
+img { max-width: 100%; height: auto; vertical-align: middle; }
+main div[style] { margin-bottom: 20px; }
+li { margin-bottom: 4px; }
+table { display: block; max-width: 100%; overflow-x: auto; border-collapse: collapse; font-size: 13px; margin: 24px 0; }
+th, td { border: 1px solid #d8dee4; padding: 10px 12px; text-align: left; min-width: 100px; }
+th { background: #f6f8fa; }
+td:last-child { min-width: 260px; }
+tr:nth-child(even) { background: #f6f8fa; }
+footer { max-width: 1180px; margin: auto; border-top: 1px solid #d8dee4; padding: 24px 32px; color: #57606a; font-size: 12px; }
+.skip-link { position: absolute; left: 16px; top: 0; padding: 12px; background: #fff; transform: translateY(-120%); z-index: 1; }
+.skip-link:focus { transform: translateY(0); }
+@media (max-width: 760px) {
+  .site-header { padding: 20px; }
+  .site-header nav { gap: 16px; }
+  .page { grid-template-columns: minmax(0, 1fr); gap: 32px; margin-top: 28px; padding: 0 20px; }
+  aside { position: static; border-bottom: 1px solid #d8dee4; padding-bottom: 20px; }
+  aside ul { display: flex; flex-wrap: wrap; column-gap: 20px; }
+  aside li { margin: 4px 0; }
+  main h1 { font-size: 26px; }
+  main h2 { font-size: 22px; }
+  footer { padding: 20px; }
+}

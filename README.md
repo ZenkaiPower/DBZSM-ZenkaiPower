@@ -1,4 +1,4 @@
-﻿# Dragon Ball Z Sparking! METEOR 
+# Dragon Ball Z Sparking! METEOR
 
 <img src="./figs/zp.png" alt="ZENKAI Power! logo" width="32" align="center"/>
 

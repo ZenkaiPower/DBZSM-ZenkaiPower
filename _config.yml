@@ -1,0 +1,9 @@
+title: ZENKAI Power!
+description: Dragon Ball Z Sparking! METEOR / Budokai Tenkaichi 3 for PC, with new features and online multiplayer.
+url: https://zenkaipower.github.io
+baseurl: /DBZSM-ZenkaiPower
+markdown: kramdown
+kramdown:
+  input: GFM
+exclude:
+  - README.md

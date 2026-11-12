@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="{{ site.description | escape }}">
+  <title>{{ site.title | escape }}</title>
+  <link rel="icon" href="{{ '/figs/zp.png' | relative_url }}" type="image/png">
+  <link rel="stylesheet" href="{{ '/assets/style.css' | relative_url }}">
+</head>
+<body>
+  <a class="skip-link" href="#content">Skip to content</a>
+  <header class="site-header">
+    <a class="brand" href="{{ '/' | relative_url }}">ZENKAI Power!</a>
+    <nav aria-label="Project links">
+      <a href="https://github.com/ZenkaiPower/DBZSM-ZenkaiPower">GitHub</a>
+      <a href="https://github.com/ZenkaiPower/DBZSM-ZenkaiPower/releases/latest">Download</a>
+    </nav>
+  </header>
+  <div class="page">
+    <aside>
+      <nav aria-label="Table of contents">
+        <h2>Contents</h2>
+        <ul>
+          <li><a href="#game-versions">Game Versions</a></li>
+          <li><a href="#tenkaichi3decomp">Tenkaichi3Decomp</a></li>
+          <li><a href="#added-features">Added Features</a></li>
+          <li><a href="#installation">Installation</a></li>
+          <li><a href="#source-code">Source Code</a></li>
+          <li><a href="#licenses">Licenses</a></li>
+          <li><a href="#legal">Legal</a></li>
+        </ul>
+      </nav>
+    </aside>
+    <main id="content">{{ content }}</main>
+  </div>
+  <footer>ZENKAI Power! · <a href="https://github.com/ZenkaiPower/DBZSM-ZenkaiPower/blob/main/README.md">View the README on GitHub</a></footer>
+</body>
+</html>
