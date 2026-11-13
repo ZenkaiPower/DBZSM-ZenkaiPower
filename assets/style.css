@@ -25,6 +25,8 @@ main { min-width: 0; overflow-wrap: break-word; }
 .carousel-slide img { display: block; width: 100%; height: 240px; object-fit: contain; background: #161b22; }
 .carousel-pair { display: flex; height: 240px; background: #161b22; }
 .carousel-pair img { width: 50%; min-width: 0; }
+.carousel-autosave { display: flex; align-items: center; justify-content: center; height: 240px; background: #000; }
+.carousel-autosave img { width: 64px; height: auto; background: transparent; }
 .carousel-slide figcaption { height: 72px; display: flex; align-items: flex-start; justify-content: center; padding: 4px 0 0; text-align: center; font-size: 14px; font-weight: 700; font-style: italic; line-height: 1.4; }
 .carousel-chevron { position: absolute; top: 98px; width: 36px; height: 44px; padding: 0; border: 0; border-radius: 6px; color: #fff; background: #161b22b3; font-size: 36px; line-height: 1; cursor: pointer; }
 .carousel-previous { left: 8px; }

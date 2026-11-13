@@ -23,7 +23,10 @@ The Western version was released in Europe as PAL and in North America as NTSC. 
 
 ### Nintendo Wii Versions
 
-<img src="./figs/RDSPAF-front.jpg" height="120"/>
+<div style="display: flex; gap: 16px; flex-wrap: wrap;">
+  <img src="./figs/RDSJAF-front.png" height="120"/>
+  <img src="./figs/RDSPAF-front.jpg" height="120"/>
+</div>
 
 Both **Sparking! METEOR** and **Budokai Tenkaichi 3** (in both Western versions) were also released for the Wii, bringing the total to six official releases. The main addition was Dragon Net Battle, an exclusive game mode unavailable on the PlayStation 2. It allowed players to connect to the *Nintendo Wi-Fi Connection* (WFC) for online battles with friends, including ranked matches.
 
@@ -34,6 +37,33 @@ Both **Sparking! METEOR** and **Budokai Tenkaichi 3** (in both Western versions)
 This project is only possible thanks to the reverse engineering work of [**Tenkaichi3Decomp**](https://github.com/z3xox/Tenkaichi3Decomp), which reconstructed the original game's source code, making it possible to modify the game and add new features. Many thanks to the project's author and all its contributors.
 
 Some of the new features implemented by **Tenkaichi3Decomp** and inherited by **ZENKAI Power!** are listed below.
+
+### Multi-Language and Translations
+
+Support for multiple languages, including the official translations from the European version. 
+
+Fan translations can also be added to the game, although they are not included in the installation package.
+
+<img src="./figs/language-selection.gif" alt="Language selection" width="320"/>
+
+### Alternative Clash Controls
+
+An optional control mode for *clashes* replaces analog stick rotation with repeated presses of the attack button.
+
+<img src="./figs/clash-tap.gif" alt="Clash controls" width="320"/>
+
+### Disc Fusion
+
+The *Disc Fusion* game modes can be unlocked and played.
+
+<img src="./figs/disc-fusion.gif" alt="Disc Fusion" width="320"/>
+
+### Autosave
+
+<div style="display: flex; align-items: center; gap: 8px;">
+  <span>The game can now save player progress<br/>automatically, without requiring manual saves.</span>
+  <img src="./figs/autosave.gif" alt="Autosave" width="64"/>
+</div>
 
 ### Higher 3D Resolutions
 
@@ -46,18 +76,6 @@ Higher-resolution texture packs can be added to the game.
 ### Video Options
 
 New video options include *V-Sync*, *Frame Skipping*, and *Frame Interpolation*. These allow the game to run at frame rates above the NTSC version's original 30 FPS.
-
-### Alternative Clash Controls
-
-An optional control mode for *clashes* replaces analog stick rotation with repeated presses of the attack button.
-
-### Autosave
-
-The game can now save player progress automatically, without requiring manual saves.
-
-### Disc Fusion
-
-The *Disc Fusion* game modes can be unlocked and played.
 
 ### Online Multiplayer
 
@@ -112,7 +130,7 @@ The remaining characters in the game's full roster of 161 are unlocked as usual,
 
 <img src="./figs/initial-characters.gif" width="320"/>
 
-⚠️ An optional fresh [save file](https://github.com/ZenkaiPower/DBZSM-ZenkaiPower/releases/tag/savegame-startcharacters) restores the original starting roster of 132 unlocked characters.
+⚠️ An optional fresh save file restores the original starting roster of 132 unlocked characters.
 
 ### LAN and Online Multiplayer
 
