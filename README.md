@@ -75,12 +75,11 @@ Menu text previously displayed as texture images has been replaced with native t
 
 Both battles and menus now support widescreen displays, going beyond the original releases' 4:3 aspect ratio.
 
+<img src="./figs/ratio-battle.gif" alt="Screen ratio in battle" width="320"/>
+
 Each menu was carefully adapted by hand for widescreen support, using a different approach from **Tenkaichi3Decomp**. Battles use the same approach as **Tenkaichi3Decomp**.
 
-<div style="display: flex; gap: 16px; flex-wrap: wrap;">
-  <img src="./figs/ratio-menu.gif" alt="Screen ratio in menu" width="320"/>
-  <img src="./figs/ratio-battle.gif" alt="Screen ratio in battle" width="320"/>
-</div>
+<img src="./figs/ratio-menu.gif" alt="Screen ratio in menu" width="320"/>
 
 ### Keyboard and Mouse Support
 
@@ -99,8 +98,8 @@ New options have been added directly to the game's Options Menu, providing more 
 You can switch between **Sparking! METEOR** and **Budokai Tenkaichi 3**, including each version's exclusive soundtrack and textures.
 
 <div style="display: flex; gap: 16px; flex-wrap: wrap;">
-  <img src="./figs/title-sparkingmeteor.gif" width="320"/>
-  <img src="./figs/title-budokaitenkaichi3.gif" width="320"/>
+  <img src="./figs/title-sparkingmeteor.gif" width="160"/>
+  <img src="./figs/title-budokaitenkaichi3.gif" width="160"/>
 </div>
 
 ### Starting Characters

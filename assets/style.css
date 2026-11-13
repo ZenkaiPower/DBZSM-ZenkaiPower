@@ -17,7 +17,23 @@ aside ul { list-style: none; padding: 0; margin: 0; }
 aside li { margin: 8px 0; }
 aside a { color: #57606a; text-decoration: none; }
 main { min-width: 0; overflow-wrap: break-word; }
-.content-intro { max-width: 900px; margin-bottom: 32px; }
+.intro-row { display: grid; grid-template-columns: minmax(0, 1fr) 320px; gap: 32px; align-items: center; margin-bottom: 40px; padding-right: 20%; }
+.content-intro { max-width: 900px; min-width: 0; text-align: left; }
+.feature-carousel { position: relative; width: 320px; max-width: 100%; height: 312px; overflow: hidden; }
+.carousel-slide { margin: 0; }
+.carousel-slide[hidden] { display: none; }
+.carousel-slide img { display: block; width: 100%; height: 240px; object-fit: contain; background: #161b22; }
+.carousel-pair { display: flex; height: 240px; background: #161b22; }
+.carousel-pair img { width: 50%; min-width: 0; }
+.carousel-slide figcaption { height: 72px; display: flex; align-items: flex-start; justify-content: center; padding: 4px 0 0; text-align: center; font-size: 14px; font-weight: 700; font-style: italic; line-height: 1.4; }
+.carousel-chevron { position: absolute; top: 98px; width: 36px; height: 44px; padding: 0; border: 0; border-radius: 6px; color: #fff; background: #161b22b3; font-size: 36px; line-height: 1; cursor: pointer; }
+.carousel-previous { left: 8px; }
+.carousel-next { right: 8px; }
+.carousel-chevron { opacity: 0; pointer-events: none; transition: opacity 150ms; }
+.feature-carousel:hover .carousel-chevron, .feature-carousel:focus-within .carousel-chevron { opacity: 1; pointer-events: auto; }
+@media (hover: none) { .carousel-chevron { opacity: 1; pointer-events: auto; } }
+.carousel-chevron:hover { background: #161b22; }
+.carousel-chevron:focus-visible { outline: 2px solid #0969da; outline-offset: 2px; }
 .content-sections { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 32px; align-items: start; }
 .content-sections > section { min-width: 0; }
 .content-sections > section > h2:first-child { margin-top: 0; }
@@ -44,9 +60,13 @@ footer { max-width: 1180px; margin: auto; border-top: 1px solid #d8dee4; padding
 @media (max-width: 1280px) {
   .content-sections { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
+@media (max-width: 1000px) {
+  .intro-row { grid-template-columns: minmax(0, 1fr); padding-right: 0; }
+}
 @media (max-width: 760px) {
   .site-header { padding: 20px; flex-wrap: wrap; }
   .site-header nav { gap: 16px; }
+  .carousel-slide img { height: 240px; }
   .page { grid-template-columns: minmax(0, 1fr); gap: 32px; margin-top: 28px; padding: 0 20px; }
   .content-sections { grid-template-columns: minmax(0, 1fr); }
   aside { position: static; border-bottom: 1px solid #d8dee4; padding-bottom: 20px; }

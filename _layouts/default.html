@@ -38,7 +38,55 @@
     </aside>
     <main id="content">
       {% assign sections = content | split: '<h2' %}
-      <div class="content-intro">{{ sections.first }}</div>
+      {% assign intro_parts = sections.first | split: '</h1>' %}
+      {{ intro_parts.first }}</h1>
+      <div class="intro-row">
+      <div class="content-intro">{{ intro_parts.last }}</div>
+      <!-- EDIT CAROUSEL CAPTIONS: Change the text inside each <figcaption> below to edit the image descriptions. -->
+      <div class="feature-carousel" role="region" aria-roledescription="carousel" aria-label="Game features">
+        <figure class="carousel-slide" data-duration="5270">
+          <img src="{{ '/figs/ratio-battle.gif' | relative_url }}" alt="Battle displayed in widescreen">
+          <figcaption>Widescreen support for battles.</figcaption>
+        </figure>
+        <figure class="carousel-slide" data-duration="5070" hidden>
+          <img src="{{ '/figs/more-options.gif' | relative_url }}" alt="Additional settings in the options menu" loading="lazy">
+          <figcaption>Additional options in the game menu.</figcaption>
+        </figure>
+        <figure class="carousel-slide" data-duration="18000" hidden>
+          <img src="{{ '/figs/touchscreen-battle.gif' | relative_url }}" alt="Android battle with a virtual gamepad" loading="lazy">
+          <figcaption>Virtual touchscreen gamepad for mobile devices.</figcaption>
+        </figure>
+        <figure class="carousel-slide" data-duration="12070" hidden>
+          <img src="{{ '/figs/dragon-net-battle.gif' | relative_url }}" alt="Dragon Net Battle multiplayer mode" loading="lazy">
+          <figcaption>Dragon Net Battle LAN and online mode.</figcaption>
+        </figure>
+        <figure class="carousel-slide" data-duration="7000" hidden>
+          <img src="{{ '/figs/touchscreen-menus.gif' | relative_url }}" alt="Navigating menus with touchscreen controls" loading="lazy">
+          <figcaption>Touchscreen menus for mobile devices.</figcaption>
+        </figure>
+        <figure class="carousel-slide" data-duration="3600" hidden>
+          <div class="carousel-pair">
+            <img src="{{ '/figs/title-sparkingmeteor.gif' | relative_url }}" alt="Sparking! METEOR edition title screen" loading="lazy">
+            <img src="{{ '/figs/title-budokaitenkaichi3.gif' | relative_url }}" alt="Budokai Tenkaichi 3 edition title screen" loading="lazy">
+          </div>
+          <figcaption>Switch between Sparking! METEOR and Budokai Tenkaichi 3.</figcaption>
+        </figure>
+        <figure class="carousel-slide" data-duration="14070" hidden>
+          <img src="{{ '/figs/mouse.gif' | relative_url }}" alt="Navigating menus using a mouse" loading="lazy">
+          <figcaption>Mouse support for menus.</figcaption>
+        </figure>
+        <figure class="carousel-slide" data-duration="5330" hidden>
+          <img src="{{ '/figs/ratio-menu.gif' | relative_url }}" alt="Game menus adapted to widescreen" loading="lazy">
+          <figcaption>Widescreen support for menus.</figcaption>
+        </figure>
+        <figure class="carousel-slide" data-duration="9070" hidden>
+          <img src="{{ '/figs/dragon-net-battle-menu.gif' | relative_url }}" alt="Dragon Net Battle modes and ranking menus" loading="lazy">
+          <figcaption>Online ranking battle and global ranking leaderboard.</figcaption>
+        </figure>
+        <button class="carousel-chevron carousel-previous" type="button" data-carousel="previous" aria-label="Previous image">&#8249;</button>
+        <button class="carousel-chevron carousel-next" type="button" data-carousel="next" aria-label="Next image">&#8250;</button>
+      </div>
+      </div>
       <div class="content-sections">
         {% assign full_width_start = sections.size | minus: 4 %}
         {% for section in sections offset: 1 %}
@@ -51,6 +99,44 @@
   </div>
   <footer>ZENKAI Power! · <a href="https://github.com/ZenkaiPower/DBZSM-ZenkaiPower/blob/main/README.md">View the README on GitHub</a></footer>
   <script>
+    (function () {
+      var carousel = document.querySelector('.feature-carousel');
+      var slides = Array.from(carousel.querySelectorAll('.carousel-slide'));
+      for (var i = slides.length - 1; i > 0; i--) {
+        var j = Math.floor(Math.random() * (i + 1));
+        var temporary = slides[i];
+        slides[i] = slides[j];
+        slides[j] = temporary;
+      }
+      slides.forEach(function (slide) { slide.hidden = true; });
+      var index = 0;
+      var paused = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      var timer;
+      function show(next) {
+        window.clearTimeout(timer);
+        slides[index].hidden = true;
+        index = (next + slides.length) % slides.length;
+        var slide = slides[index];
+        var images = Array.from(slide.querySelectorAll('img'));
+        var remaining = images.length;
+        images.forEach(function (image) {
+          var source = image.dataset.source || image.getAttribute('src');
+          image.dataset.source = source;
+          image.onload = image.onerror = function () {
+            remaining--;
+            if (remaining === 0 && slides[index] === slide && !paused) {
+              timer = window.setTimeout(function () { show(index + 1); }, Number(slide.dataset.duration));
+            }
+          };
+          image.loading = 'eager';
+          image.src = source + (source.indexOf('?') === -1 ? '?' : '&') + 'play=' + Date.now();
+        });
+        slide.hidden = false;
+      }
+      carousel.querySelector('[data-carousel="previous"]').addEventListener('click', function () { show(index - 1); });
+      carousel.querySelector('[data-carousel="next"]').addEventListener('click', function () { show(index + 1); });
+      show(0);
+    })();
     fetch('https://api.github.com/repos/ZenkaiPower/DBZSM-ZenkaiPower/releases/latest')
       .then(function (response) { if (!response.ok) throw new Error('Release unavailable'); return response.json(); })
       .then(function (release) {
