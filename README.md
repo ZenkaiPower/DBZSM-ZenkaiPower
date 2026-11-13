@@ -112,7 +112,7 @@ The remaining characters in the game's full roster of 161 are unlocked as usual,
 
 <img src="./figs/initial-characters.gif" width="320"/>
 
-⚠️ An optional fresh save file restores the original starting roster of 132 unlocked characters.
+⚠️ An optional fresh [save file](https://github.com/ZenkaiPower/DBZSM-ZenkaiPower/releases/tag/savegame-startcharacters) restores the original starting roster of 132 unlocked characters.
 
 ### LAN and Online Multiplayer
 
