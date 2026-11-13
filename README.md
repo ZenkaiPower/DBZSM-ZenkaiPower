@@ -17,7 +17,7 @@ Originally released on October 4, 2007, for the PlayStation 2 and Nintendo Wii. 
 <div style="display: flex; gap: 16px; flex-wrap: wrap;">
   <img src="./figs/SLUS-21678-front.jpg" height="120"/>
   <img src="./figs/SLES-54945-front.jpg" height="120"/>
- 
+</div>
 
 The Western version was released in Europe as PAL and in North America as NTSC. In addition to its different title, this version includes a unique 20-track soundtrack composed specifically for the game, along with an English voice option. Besides the 50 Hz versus 60 Hz refresh rates, the main differences are that the European version includes four additional text languages alongside English: German, Spanish, French, and Italian.
 

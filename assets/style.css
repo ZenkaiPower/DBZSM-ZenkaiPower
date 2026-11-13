@@ -7,7 +7,7 @@ a:focus-visible, [tabindex]:focus-visible { outline: 2px solid #0969da; outline-
 .site-header { max-width: 1180px; margin: auto; padding: 24px 32px; display: flex; align-items: center; justify-content: space-between; gap: 20px; border-bottom: 1px solid #d8dee4; }
 .brand { display: inline-flex; align-items: center; gap: 8px; color: #24292f; font-size: 20px; font-weight: 700; text-decoration: none; }
 .brand-icon { width: 32px; height: auto; }
-.brand-group { display: flex; align-items: baseline; gap: 8px; }
+.brand-group { display: flex; flex-wrap: wrap; align-items: baseline; gap: 8px; }
 .release-version { color: #57606a; font-size: 12px; text-decoration: none; }
 .site-header nav { display: flex; gap: 24px; font-size: 14px; }
 .page { max-width: 1720px; margin: 40px auto 64px; padding: 0 32px; display: grid; grid-template-columns: 170px minmax(0, 1fr); gap: 32px; }
@@ -28,6 +28,9 @@ main h2 { font-size: 24px; margin: 42px 0 18px; padding-bottom: 10px; border-bot
 main h3 { font-size: 19px; margin: 30px 0 12px; }
 p { margin: 0 0 18px; }
 img { max-width: 100%; height: auto; vertical-align: middle; }
+img[height]:not([width]) { width: auto; }
+img[height="120"] { height: 120px; object-fit: contain; }
+img[height="480"] { max-height: 480px; }
 main div[style] { margin-bottom: 20px; }
 li { margin-bottom: 4px; }
 table { display: block; max-width: 100%; overflow-x: auto; border-collapse: collapse; font-size: 13px; margin: 24px 0; }
@@ -42,7 +45,7 @@ footer { max-width: 1180px; margin: auto; border-top: 1px solid #d8dee4; padding
   .content-sections { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 @media (max-width: 760px) {
-  .site-header { padding: 20px; }
+  .site-header { padding: 20px; flex-wrap: wrap; }
   .site-header nav { gap: 16px; }
   .page { grid-template-columns: minmax(0, 1fr); gap: 32px; margin-top: 28px; padding: 0 20px; }
   .content-sections { grid-template-columns: minmax(0, 1fr); }
