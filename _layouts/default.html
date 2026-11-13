@@ -11,7 +11,10 @@
 <body>
   <a class="skip-link" href="#content">Skip to content</a>
   <header class="site-header">
-    <a class="brand" href="{{ '/' | relative_url }}">ZENKAI Power!</a>
+    <div class="brand-group">
+      <a class="brand" href="{{ '/' | relative_url }}"><img class="brand-icon" src="{{ '/figs/zp.png' | relative_url }}" alt="">ZENKAI Power!</a>
+      <a class="release-version" id="release-version" href="https://github.com/ZenkaiPower/DBZSM-ZenkaiPower/releases/latest" hidden></a>
+    </div>
     <nav aria-label="Project links">
       <a href="https://github.com/ZenkaiPower/DBZSM-ZenkaiPower">GitHub</a>
       <a href="https://github.com/ZenkaiPower/DBZSM-ZenkaiPower/releases/latest">Download</a>
@@ -25,6 +28,7 @@
           <li><a href="#game-versions">Game Versions</a></li>
           <li><a href="#tenkaichi3decomp">Tenkaichi3Decomp</a></li>
           <li><a href="#added-features">Added Features</a></li>
+          <li><a href="#mobile-version">Mobile Version</a></li>
           <li><a href="#installation">Installation</a></li>
           <li><a href="#source-code">Source Code</a></li>
           <li><a href="#licenses">Licenses</a></li>
@@ -36,9 +40,9 @@
       {% assign sections = content | split: '<h2' %}
       <div class="content-intro">{{ sections.first }}</div>
       <div class="content-sections">
-        {% assign full_width_start = sections.size | minus: 3 %}
+        {% assign full_width_start = sections.size | minus: 4 %}
         {% for section in sections offset: 1 %}
-          <section class="{% if forloop.index >= full_width_start %}content-wide{% else %}content-column{% endif %}">
+          <section class="{% if forloop.first or forloop.index >= full_width_start %}content-wide{% else %}content-column{% endif %}">
             <h2{{ section }}
           </section>
         {% endfor %}
@@ -46,5 +50,17 @@
     </main>
   </div>
   <footer>ZENKAI Power! · <a href="https://github.com/ZenkaiPower/DBZSM-ZenkaiPower/blob/main/README.md">View the README on GitHub</a></footer>
+  <script>
+    fetch('https://api.github.com/repos/ZenkaiPower/DBZSM-ZenkaiPower/releases/latest')
+      .then(function (response) { if (!response.ok) throw new Error('Release unavailable'); return response.json(); })
+      .then(function (release) {
+        if (release.tag_name) {
+          var label = document.getElementById('release-version');
+          label.textContent = release.tag_name;
+          label.hidden = false;
+        }
+      })
+      .catch(function () {});
+  </script>
 </body>
 </html>

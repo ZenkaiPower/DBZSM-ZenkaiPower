@@ -1,24 +1,31 @@
-# Dragon Ball Z Sparking! METEOR
+﻿# Dragon Ball Z Sparking! METEOR
 
-<img src="./figs/zp.png" alt="ZENKAI Power! logo" width="32" align="center"/>
-
-The **ZENKAI Power!** project aims to provide a complete version of **Dragon Ball Z Sparking! METEOR**, also known as **Dragon Ball Z Budokai Tenkaichi 3**, as if the game had been officially released for PC. The project also celebrates the different releases of the game by bringing together their unique features into a definitive edition.
+The **ZENKAI Power!** project aims to provide a complete version of **Dragon Ball Z Sparking! METEOR**, also known as **Dragon Ball Z Budokai Tenkaichi 3**, as if the game had been officially released for PC and mobile. The project also celebrates the different releases of the game by bringing together their unique features into a definitive edition.
 
 ## Game Versions
 
 ### Sparking! METEOR
 
+<img src="./figs/SLPS-25815-front.jpg" height="120"/>
+
 Originally released on October 4, 2007, for the PlayStation 2 and Nintendo Wii. It includes several textures that were changed in the Western releases. Its main distinction is a soundtrack featuring original music from the anime, with four more tracks than the Western versions.
 
 ### Budokai Tenkaichi 3
+
+<div style="display: flex; gap: 16px; flex-wrap: wrap;">
+  <img src="./figs/SLUS-21678-front.jpg" height="120"/>
+  <img src="./figs/SLES-54945-front.jpg" height="120"/>
+ 
 
 The Western version was released in Europe as PAL and in North America as NTSC. In addition to its different title, this version includes a unique 20-track soundtrack composed specifically for the game, along with an English voice option. Besides the 50 Hz versus 60 Hz refresh rates, the main differences are that the European version includes four additional text languages alongside English: German, Spanish, French, and Italian.
 
 ### Nintendo Wii Versions
 
+<img src="./figs/RDSPAF-front.jpg" height="120"/>
+
 Both **Sparking! METEOR** and **Budokai Tenkaichi 3** (in both Western versions) were also released for the Wii, bringing the total to six official releases. The main addition was Dragon Net Battle, an exclusive game mode unavailable on the PlayStation 2. It allowed players to connect to the *Nintendo Wi-Fi Connection* (WFC) for online battles with friends, including ranked matches.
 
-The **ZENKAI Power!** project brings the best of these versions together into a single, definitive edition of the game.
+<img src="./figs/zp.png" alt="ZENKAI Power! logo" width="32" align="center"/> The **ZENKAI Power!** project brings the best of these versions together into a single, definitive edition of the game.
 
 ## Tenkaichi3Decomp
 
@@ -132,20 +139,55 @@ Ranked mode uses the game's native scoring system.
 
 <img src="./figs/dragon-net-battle-menu.gif" width="320"/>
 
+## Mobile Version
+
+**ZENKAI Power!** is available for Android.
+A similar project is the **[Tenkaichi3DecompAndroid](https://github.com/dfdx047/Tenkaichi3DecompAndroid)**.
+
+⚠️ It currently requires a device running **Android 10 or later**, an **ARM64 CPU**, and support for **Vulkan**.
+
+### Touchscreen Menus
+
+The game's menus have been adapted for touchscreen devices, similar to the Mouse support on PC.
+
+<img src="./figs/touchscreen-menus.gif" alt="Touchscreen support" width="320"/>
+
+### Virtual Gamepad
+
+During battles, a virtual gamepad can be displayed on the screen, allowing players to control the game without a physical controller.
+
+The virtual gamepad uses original game artwork for the buttons.
+
+<img src="./figs/touchscreen-battle.gif" alt="Virtual gamepad" width="320"/>
+
+### Gamepad Support
+
+Gamepad support is available for Android devices, allowing players to use a controller instead of the touchscreen.
+
 ## Installation
 
 To install the game, you must own a copy of the North American NTSC PlayStation 2 version of **Dragon Ball Z Budokai Tenkaichi 3**. Other versions are optional to add extra content and unlock some of the features listed above, including *Dragon Net Battle*.
 
 ⚠️ No game files are distributed with the **ZENKAI Power!** project.
 
-| Region | Platform | Required / Optional | Status | Game ID | Description |
-| --- | --- | --- | --- | --- | --- |
-| North America | PlayStation 2 | **Required** | Verified | SLUS-21678 | Installs the base game. |
-| Europe | PlayStation 2 | Optional | Verified | SLES-54945 | Adds the official Spanish, German, French, and Italian translations and restores the game opening soundtrack. |
-| Europe | Wii | Optional | Verified | RDSPAF | Adds the Dragon Net Battle mode, exclusive to the Wii version. Required for playing LAN or online. |
-| Japan | PlayStation 2 | Optional | Verified | SLPS-25815 | Adds the option to toggle exclusive content from the Japanese version, Sparking! METEOR, including title screen artwork, anime soundtrack, and more. |
+### Desktop
 
 Download the installation files for your platform (Windows or Linux), extract them, and follow the installer's instructions. The installation files are available on the [**releases page**](https://github.com/ZenkaiPower/DBZSM-ZenkaiPower/releases/latest).
+
+<img src="./figs/setup-desktop.gif" alt="Desktop setup" width="320"/>
+
+### Android
+
+Download the `.apk` file from the [**releases page**](https://github.com/ZenkaiPower/DBZSM-ZenkaiPower/releases/latest), install it on your Android device, and follow the instructions in the app.
+
+<img src="./figs/setup-android.gif" alt="Android setup" height="480"/>
+
+### Versions Supported
+
+- **North America - PlayStation 2** (**Required** `SLUS-21678`): Installs the base game.
+- **Europe - PlayStation 2** (Optional `SLES-54945`): Adds the official Spanish, German, French, and Italian translations and restores the game opening soundtrack.
+- **Europe - Wii** (Optional `RDSPAF`): Adds the Dragon Net Battle mode, exclusive to the Wii version. Required for playing LAN or online.
+- **Japan - PlayStation 2** (Optional `SLPS-25815`): Adds the option to toggle exclusive content from the Japanese version, Sparking! METEOR, including title screen artwork, anime soundtrack, and more.
 
 ## Source Code
 
