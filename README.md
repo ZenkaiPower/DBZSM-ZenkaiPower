@@ -2,7 +2,9 @@
 
 The **ZENKAI Power!** project aims to provide a complete version of **Dragon Ball Z Sparking! METEOR**, also known as **Dragon Ball Z Budokai Tenkaichi 3**, as if the game had been officially released for PC and mobile. The project also celebrates the different releases of the game by bringing together their unique features into a definitive edition.
 
-## Game Versions
+## Game Editions
+
+Three localized versions of the game were released on two different consoles between late 2007 and early 2008.
 
 ### Sparking! METEOR
 
