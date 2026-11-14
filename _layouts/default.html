@@ -13,11 +13,11 @@
   <header class="site-header">
     <div class="brand-group">
       <a class="brand" href="{{ '/' | relative_url }}"><img class="brand-icon" src="{{ '/figs/zp.png' | relative_url }}" alt="">ZENKAI Power!</a>
-      <a class="release-version" id="release-version" href="https://github.com/ZenkaiPower/DBZSM-ZenkaiPower/releases/latest" hidden></a>
+      <a class="release-version" id="release-version" href="https://github.com/ZenkaiPower/ZenkaiPower/releases/latest" hidden></a>
     </div>
     <nav aria-label="Project links">
-      <a href="https://github.com/ZenkaiPower/DBZSM-ZenkaiPower">GitHub</a>
-      <a href="https://github.com/ZenkaiPower/DBZSM-ZenkaiPower/releases/latest">Download</a>
+      <a href="https://github.com/ZenkaiPower/ZenkaiPower">GitHub</a>
+      <a href="https://github.com/ZenkaiPower/ZenkaiPower/releases/latest">Download</a>
     </nav>
   </header>
   <div class="page">
@@ -30,6 +30,7 @@
           <li><a href="#added-features">Added Features</a></li>
           <li><a href="#mobile-version">Mobile Version</a></li>
           <li><a href="#installation">Installation</a></li>
+          <li><a href="#changelog">Changelog</a></li>
           <li><a href="#source-code">Source Code</a></li>
           <li><a href="#licenses">Licenses</a></li>
           <li><a href="#legal">Legal</a></li>
@@ -101,6 +102,14 @@
           <img src="{{ '/figs/dragon-net-battle-menu.gif' | relative_url }}" alt="Dragon Net Battle modes and ranking menus" loading="lazy">
           <figcaption>Online ranking battle and global ranking leaderboard.</figcaption>
         </figure>
+        <figure class="carousel-slide" data-duration="9800" hidden>
+          <img src="{{ '/figs/character-voices.gif' | relative_url }}" alt="Character voice settings" loading="lazy">
+          <figcaption>Character Reference now shows both Japanese and US voice actors of each character.</figcaption>
+        </figure>
+        <figure class="carousel-slide" data-duration="7530" hidden>
+          <img src="{{ '/figs/training-settings.gif' | relative_url }}" alt="Adjusting settings in the training pause menu" loading="lazy">
+          <figcaption>Enable or disable health, ki, and blast stock regeneration in training.</figcaption>
+        </figure>
         <button class="carousel-chevron carousel-previous" type="button" data-carousel="previous" aria-label="Previous image">&#8249;</button>
         <button class="carousel-chevron carousel-next" type="button" data-carousel="next" aria-label="Next image">&#8250;</button>
       </div>
@@ -113,9 +122,17 @@
           </section>
         {% endfor %}
       </div>
+      <section id="changelog" aria-labelledby="changelog-heading">
+        <h2 id="changelog-heading">Changelog</h2>
+        <p>Release notes from <a href="https://github.com/ZenkaiPower/ZenkaiPower/releases">GitHub Releases</a>.</p>
+        <p id="releases-status" role="status">Loading releases…</p>
+        <div id="releases-list"></div>
+        <button id="releases-more" type="button" hidden>Load older releases</button>
+        <noscript><p>Enable JavaScript to display release notes here, or view them on GitHub.</p></noscript>
+      </section>
     </main>
   </div>
-  <footer>ZENKAI Power! · <a href="https://github.com/ZenkaiPower/DBZSM-ZenkaiPower/blob/main/README.md">View the README on GitHub</a></footer>
+  <footer>ZENKAI Power! · <a href="https://github.com/ZenkaiPower/ZenkaiPower/blob/main/README.md">View the README on GitHub</a></footer>
   <script>
     (function () {
       var carousel = document.querySelector('.feature-carousel');
@@ -166,5 +183,6 @@
       })
       .catch(function () {});
   </script>
+  <script src="{{ '/assets/releases.js' | relative_url }}" defer></script>
 </body>
 </html>

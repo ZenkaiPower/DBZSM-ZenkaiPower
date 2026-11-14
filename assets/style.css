@@ -57,6 +57,12 @@ th { background: #f6f8fa; }
 td:last-child { min-width: 260px; }
 tr:nth-child(even) { background: #f6f8fa; }
 footer { max-width: 1180px; margin: auto; border-top: 1px solid #d8dee4; padding: 24px 32px; color: #57606a; font-size: 12px; }
+.release-entry { margin-bottom: 16px; padding: 16px; border: 1px solid #d8dee4; border-radius: 6px; }
+.release-entry summary { cursor: pointer; font-size: 19px; font-weight: 600; }
+.release-meta { margin: 12px 0; color: #57606a; font-size: 14px; }
+.release-notes { white-space: pre-wrap; overflow-wrap: anywhere; }
+#releases-more { padding: 8px 16px; border: 1px solid #d8dee4; border-radius: 6px; background: #f6f8fa; color: #24292f; font: inherit; cursor: pointer; }
+#releases-more:disabled { cursor: wait; opacity: .6; }
 .skip-link { position: absolute; left: 16px; top: 0; padding: 12px; background: #fff; transform: translateY(-120%); z-index: 1; }
 .skip-link:focus { transform: translateY(0); }
 @media (max-width: 1280px) {

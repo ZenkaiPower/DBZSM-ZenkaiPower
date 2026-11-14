@@ -158,6 +158,22 @@ Ranked mode uses the game's native scoring system.
 
 <img src="./figs/dragon-net-battle-menu.gif" width="320"/>
 
+### Training Settings
+
+Add a pause menu to the training mode, allowing players to adjust training settings like health, ki and blast stock auto regeneration.
+
+<img src="./figs/training-settings.gif" width="320"/>
+
+### Character Reference
+
+The *Character Reference* menu now include both Japanese and US voice actors for each character.
+
+<img src="./figs/character-voices.gif" width="320"/>
+
+### Character Names
+
+A filter was added to stop displaying ®, ™, and © symbols.
+
 ## Mobile Version
 
 **ZENKAI Power!** is available for Android.
@@ -191,13 +207,13 @@ To install the game, you must own a copy of the North American NTSC PlayStation 
 
 ### Desktop
 
-Download the installation files for your platform (Windows or Linux), extract them, and follow the installer's instructions. The installation files are available on the [**releases page**](https://github.com/ZenkaiPower/DBZSM-ZenkaiPower/releases/latest).
+Download the installation files for your platform (Windows or Linux), extract them, and follow the installer's instructions. The installation files are available on the [**releases page**](https://github.com/ZenkaiPower/ZenkaiPower/releases/latest).
 
 <img src="./figs/setup-desktop.gif" alt="Desktop setup" width="320"/>
 
 ### Android
 
-Download the `.apk` file from the [**releases page**](https://github.com/ZenkaiPower/DBZSM-ZenkaiPower/releases/latest), install it on your Android device, and follow the instructions in the app.
+Download the `.apk` file from the [**releases page**](https://github.com/ZenkaiPower/ZenkaiPower/releases/latest), install it on your Android device, and follow the instructions in the app.
 
 <img src="./figs/setup-android.gif" alt="Android setup" height="480"/>
 
